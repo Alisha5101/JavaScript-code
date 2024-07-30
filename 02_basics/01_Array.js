@@ -38,3 +38,12 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 //9. indexOf(element)-returns the index of elemnt
 console.log(newArr.indexOf(4));
 
+// 10. slice(start,index)-returns part of array 
+
+// 11.splice(index,delete count,elements....)-The splice() method adds and/or removes array elements.
+// The splice() method overwrites the original array.
+newArr.splice(3,0,"alisha","rani")
+console.log(newArr)
+newArr.splice(3,1);
+console.log(newArr)
+
