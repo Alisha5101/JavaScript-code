@@ -20,8 +20,9 @@ console.log(str2.substring(2,7));
 // console.log(str.slice(-7,-1));
 
 //6. split(pattern symbol)
-// let str='The quick-brown fox jumps over the lazy dog.'
-// console.log(str.split('-'));
+let str='The quick-brown fox jumps over the lazy dog.'
+console.log(str.split('-'));
+console.log(typeof str)
 
 //7. replace(string,replaceword);
 // let str='The quick-brown fox jumps over the lazy dog.'
