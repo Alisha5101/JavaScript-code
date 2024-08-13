@@ -7,7 +7,7 @@ let arr1=[1,2,3,4,5];
 // 1.join()/join(seperator)-it returns string,it does not change original array
 
 let arr2=['alisha','is','a','good','girl'];
-// console.log(arr2.join(" "))
+console.log(arr2.join(" "))
 // console.log(arr2)
 
 let newArr=new Array(1,2,3,4,5);//The new Array() constructor creates an Array object.

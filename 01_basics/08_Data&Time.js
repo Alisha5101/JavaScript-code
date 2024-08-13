@@ -15,6 +15,6 @@ console.log(mydate.toLocaleDateString())
 console.log(`${mydate.getDate()}-${mydate.getMonth()+1}-${mydate.getFullYear()}`);
 
 // to compare dates we can use getTime() or date.now()
-console.log(mydate.getTime())
+console.log(mydate.getTime())//returns in milliseconds
 let newDate=Date.now();
 console.log(newDate);
