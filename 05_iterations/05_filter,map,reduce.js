@@ -90,3 +90,23 @@ let mapValue=obj.map( (value)=>{
 return value.id})
 
 console.log(mapValue)
+
+// chaining
+let ids=obj.filter( (value)=>(value.id%2==0)).map((id)=>id.id+1)
+console.log(ids)
+
+
+// reduce method-we use to sum cart value
+
+let Arr1=[2,3,4,5,6];
+let sumArray=Arr1.reduce( (acc,current)=>{
+  return acc + current
+},0)
+console.log(sumArray)
+
+let indexVal=Arr1.find((ele)=>ele%2!=0)
+console.log(indexVal)
+let mySum=Arr1.reduce((acc,indexVal)=>{
+  console.log(`${acc} and valu ${indexVal}`)
+  return acc+indexVal
+},0)
