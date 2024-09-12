@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alisha and fun</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let input=document.createElement('input')
+    console.log(input)
+    input.setAttribute("type","text")
+    document.body.appendChild(input)
+
+    let button=document.createElement("button");
+    button.setAttribute("type","submit");
+    button.style.backgroundColor="yellow";
+    button.style.color="red";
+    button.style.cursor="pointer"
+    let text=document.createTextNode("Submit");
+    button.appendChild(text);
+
+    document.body.appendChild(button)
+
+    let div=document.createElement('div');
+    div.style.backgroundColor="green";
+    div.className="first";
+//    console.log(div)
+    let addText=document.createTextNode("Welcome to my js course");
+    div.appendChild(addText);
+
+    document.body.appendChild(div)
+    let element=document.querySelector(".first");
+     console.log(element)
+    element.style.padding="12px"
+</script>
+</html>

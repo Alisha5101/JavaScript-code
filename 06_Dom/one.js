@@ -24,8 +24,13 @@ console.log(input.innerHTML)//DOM Learning with Alisha <span style="display:none
 // Note:querySelectorAll return nodeList and getElemntByClass return HTMLCollection
 
 let listItems=document.getElementById('list')
-console.log(listItems);
+// console.log(listItems);
 let HTMLList=listItems.getElementsByClassName('item');
-console.log(HTMLList)
+// console.log(HTMLList)
 let nodeList=document.querySelectorAll('.item');
-console.log(nodeList)
+// console.log(nodeList)
+
+
+
+let parent=document.querySelector('.parent');
+console.log(parent)

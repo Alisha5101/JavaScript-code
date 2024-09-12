@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // let ul=document.querySelector(".language")
+    // let li2=document.createElement("li");
+    // addItem1=document.createTextNode("angular");
+    // li2.appendChild(addItem1)
+    // ul.appendChild(li2)
+
+    function language(langName){
+        let ul=document.querySelector(".language")
+    let li2=document.createElement("li");
+    addItem1=document.createTextNode(langName);
+    li2.appendChild(addItem1)
+    ul.appendChild(li2)  
+    }
+
+    language("Angular");
+    language("C++")
+
+    // edit elements
+    
+    let thirdChild=document.querySelector('li:nth-child(3)');
+    console.log(thirdChild);
+    let element=document.createElement("li")
+    element.textContent="python"
+    console.log(element)
+    thirdChild.replaceWith(element) 
+    
+    let firstElement=document.querySelector("li:first-child");
+    console.log(firstElement);
+
+    firstElement.outerHTML="<li>react</li>";
+
+    // remove element
+    let secondElement=document.querySelector('li:nth-child(2)');
+    secondElement.remove()
+</script>
+</html>
