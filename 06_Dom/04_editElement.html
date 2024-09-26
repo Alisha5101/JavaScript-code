@@ -27,23 +27,32 @@
 
     language("Angular");
     language("C++")
-
+language("react");
+language("sap")
     // edit elements
     
-    let thirdChild=document.querySelector('li:nth-child(3)');
-    console.log(thirdChild);
-    let element=document.createElement("li")
-    element.textContent="python"
-    console.log(element)
-    thirdChild.replaceWith(element) 
+    // let thirdChild=document.querySelector('li:nth-child(3)');
+    // console.log(thirdChild);
+    // let element=document.createElement("li")
+    // element.textContent="python"
+    // console.log(element)
+    // thirdChild.replaceWith(element) 
     
-    let firstElement=document.querySelector("li:first-child");
-    console.log(firstElement);
+    // let firstElement=document.querySelector("li:first-child");
+    // console.log(firstElement);
 
-    firstElement.outerHTML="<li>react</li>";
+    // firstElement.outerHTML="<li>react</li>";
 
+
+    const forthElement=document.querySelector('li:nth-child(5)');
+    console.log(forthElement);
+const newli=document.createElement('li')
+newli.appendChild(document.createTextNode("JAVA"))
+    forthElement.replaceWith(newli)
     // remove element
-    let secondElement=document.querySelector('li:nth-child(2)');
-    secondElement.remove()
+    // let secondElement=document.querySelector('li:nth-child(2)');
+    // secondElement.remove()
+
+
 </script>
 </html>
