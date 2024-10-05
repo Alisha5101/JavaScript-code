@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>html Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -18,3 +18,68 @@
         </ul>
    </div>
 </body>
+<script>
+//     let owl=document.querySelector("#owl");
+//     owl.addEventListener("click",(e)=>{
+// console.log(e)
+//     },false)//here false is event propagation by default it is false
+     // type, timestamp, preventDefault()
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY,offsetX,offSetY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //Propagation means bubbling up to parent element or capturing down to child element
+
+    // btn.addEventListener('click',(e)=>{
+    // console.log(e)
+    // },false)--here false means event bubbling and true means event capturing
+
+    // Event bubbling-it happens when an event bubbles up or transmit from child to parent element 
+//     document.querySelector("#images").addEventListener("click",(e)=>{
+//         console.log("parent element")
+//     },false);
+// document.querySelector("#owl").addEventListener("click",(e)=>{
+//     console.log("child element")
+// })
+
+// Event Capturing -it hapens from parent to child element when event propagation value is true
+// document.querySelector("#images").addEventListener("click",(e)=>{
+//         console.log("parent element");
+//         e.stopPropagation()
+//     },true);
+// document.querySelector("#owl").addEventListener("click",(e)=>{
+//     console.log("child element");
+//     // e.stopPropagation();
+// },true)
+
+
+//** to prevent event bubbling and event capturing use stopPropagation()
+
+/* The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
+For example, this can be useful when:
+
+Clicking on a "Submit" button, prevent it from submitting a form
+Clicking on a link, prevent the link from following the URL
+Note: Not all events are cancelable. Use the cancelable property to find out if an event is cancelable.
+
+Note: The preventDefault() method does not prevent further propagation of an event through the DOM. Use the stopPropagation() method to handle this.
+ */
+
+
+document.querySelector("#google").addEventListener('click',(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("google is clicked")
+})
+
+// write a program to hide images on click
+
+document.querySelector("#images").addEventListener("click",(e)=>{
+    console.log(e.target.parentNode);
+    if(e.target.tagName=='IMG'){
+        e.target.parentNode.remove();
+    }
+})
+</script>
+</html>
