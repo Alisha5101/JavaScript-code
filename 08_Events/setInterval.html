@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+
+<body>
+    <h1>Timer:</h1>
+    <button id="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+let interval;
+    let i = 1
+    let newh1 = document.createElement("span");
+    newh1.appendChild(document.createTextNode(`${i}`));
+
+    let h1 = document.querySelector("h1");
+    h1.appendChild(newh1)
+
+    let start=function(){
+        i=i+1
+        newh1.innerHTML=i
+    }
+  
+    document.querySelector("#start").addEventListener("click", (e) => {
+         interval = setInterval(start, 1000)
+     })
+
+    document.querySelector(".stop").addEventListener("click", () => {
+        clearInterval(interval)
+    })
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // console.log(1);
+    // setTimeout(() => {
+    //     console.log(2)
+    // }, 0);
+    // console.log(3)
+const myFun=()=>{
+    console.log("welcome to my world")
+    document.querySelector('h1').innerHTML="<h2>welcome to js course<h2>"
+}
+  const clearTime=  setTimeout(myFun, 5000);
+
+document.querySelector("#stop").addEventListener("click",()=>{
+    clearTimeout(clearTime);
+    console.log("stop timeout")
+})
+</script>
+</html>

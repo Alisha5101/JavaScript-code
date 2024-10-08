@@ -39,3 +39,49 @@ buttons.forEach((value) => {
 });
 
 ```
+## unlimited colors code
+```javascript
+
+let interval;
+
+const color=()=>{
+  let hex='0123456789ABCDEF';
+  let randomColor='#'
+  for(let i=0;i<6;i++){
+    randomColor+=hex[Math.floor(Math.random() * 16)]
+  }
+  return randomColor;
+}
+
+document.querySelector("#start").addEventListener("click",(e)=>{
+  if(!interval){
+    interval=setInterval(()=>{
+    
+      document.body.style.backgroundColor=color();
+      // randomColor='#'
+  
+    },1000)
+  }
+  
+
+})
+
+document.querySelector("#stop").addEventListener("click",(e)=>{
+clearInterval(interval);
+interval=null
+})
+
+```
+
+## keyboard code
+``` javascript
+console.log('Project 5');
+let keyValue=document.querySelector('.key');
+
+document.addEventListener('keyup',(e)=>{
+  if(e.key==" "){
+    keyValue.innerHTML="space"
+  }
+  keyValue.innerHTML=`${e.code} and ${e.key} `
+})
+```
