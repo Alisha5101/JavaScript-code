@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello everyone
+</body>
+<script>
+let Data;
+    const xmrUrl='https://api.github.com/users/hiteshchoudhary'
+    const xmr=new XMLHttpRequest();
+    xmr.open('GET',xmrUrl);
+xmr.onreadystatechange=function(){
+    console.log(xmr.readyState);
+    if(xmr.readyState==4){
+        console.log(typeof this.responseText)
+      data=JSON.parse(this.responseText);
+      console.log(data)
+      const div=document.createElement('div');
+   div.classList.add('card');
+   div.style.height='200px';
+   div.style.width='400px';
+   div.style.backgroundColor="skyblue"
+   document.body.appendChild(div);
+
+   const divData=document.querySelector(".card");
+   console.log(divData);
+const img=document.createElement('img');
+img.setAttribute('src',data.avatar_url)
+console.log(img)
+img.style.height='100px';
+img.style.width='100px';
+divData.appendChild(img)
+//    text=document.createTextNode(data.followers);
+//    divData.appendChild(text)
+    }
+   
+}
+xmr.send()
+console.log(data)
+ 
+
+   
+  
+</script>
+
+</html>
