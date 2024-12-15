@@ -35,6 +35,19 @@
     document.body.appendChild(div)
     let element=document.querySelector(".first");
      console.log(element)
-    element.style.padding="12px"
+    element.style.padding="12px";
+
+    let button_box=document.createElement("Button");
+    button_box.innerText="Click me";
+    button_box.style.backgroundColor="red";
+    button_box.style.color="white";
+    document.body.prepend(button_box);
+
+    let paragraph=document.createElement("p");
+    paragraph.innerText="welcome my friends";
+
 </script>
+<!-- Element.append() allows you to also append strings, whereas Node.appendChild() only accepts Node objects.
+Element.append() has no return value, whereas Node.appendChild() returns the appended Node object.
+Element.append() can append several nodes and strings, whereas Node.appendChild() can only append one node. -->
 </html>

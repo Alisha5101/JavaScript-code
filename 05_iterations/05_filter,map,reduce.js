@@ -110,3 +110,28 @@ let mySum=Arr1.reduce((acc,indexVal)=>{
   console.log(`${acc} and valu ${indexVal}`)
   return acc+indexVal
 },0)
+
+let num=[];
+let input=prompt("enter number");
+for(let i=1;i<=input;i++){
+  num.push(i)
+}
+console.log(num)
+
+let sum=num.reduce((prev,curr)=>{
+  return prev+curr;
+},0)
+
+let product=num.reduce((prev,curr)=>{
+  return prev*curr;
+},1)
+console.log("sum",sum)
+console.log("product",product)
+
+// find maximum from array
+
+let numarr=[23,45,2,47,55];
+let maxVal=numarr.reduce((prev,curr)=>{
+  return prev>curr?prev:curr
+})
+console.log("max",maxVal)
