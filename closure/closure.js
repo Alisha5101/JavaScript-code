@@ -35,25 +35,65 @@
 
 // we can have sturcture like outer---inner---inner2
 // example
+// function outer(){
+//     debugger
+//     let  name="alisha";
+//     let age=26;
+
+//     function inner(){
+//         debugger
+//         let sub="javascript"
+//         console.log(name);
+
+//         function inner2(){
+//             debugger
+//             console.log("sub");
+//             // console.log(name)
+//         }
+//         inner2()
+//     }
+// inner()
+
+// }
+
+// outer();
+
+// below is the code snippent ,see that and guess the output
+
 function outer(){
-    debugger
-    let  name="alisha";
-    let age=26;
-
-    function inner(){
-        debugger
-        let sub="javascript"
-        console.log(name);
-
-        function inner2(){
-            debugger
-            console.log("sub");
-            // console.log(name)
+    counter=0;
+    return {
+        increment:function(){
+            counter++;
+            console.log(counter)
+        },
+        decrememnt:function(){
+            counter--;
+            console.log(counter)
         }
-        inner2()
     }
-inner()
+}
+// result=outer();
+// result.increment()
+// result.increment()
+// result.increment()
+// result.decrememnt()
+// what we will be output now
+// ======== its 1,2,3
 
+// let result2=outer();
+// result2.increment()
+// result2.increment();
+// result2.decrememnt()
+
+// what will be the out put now
+// its 1,2 again because now we new object and it will create different execution context 
+
+for(var i=0;i<3;i++){
+    
+    setTimeout(()=>{
+        debugger
+        console.log(i)},3000)
 }
 
-outer();
+
